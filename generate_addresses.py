@@ -5,14 +5,19 @@ from dotenv import load_dotenv
 
 load_dotenv()
 IPV6_SUBNET = os.getenv('IPV6_SUBNET')
-MAX_IPS = os.getenv('MAX_IPS')
+MAX_IPS = int(os.getenv('MAX_IPS'))
 INTERFACE = os.getenv('INTERFACE')
 ADDRESS_FILE = os.getenv('ADDRESS_FILE')
 
 print(f'IPV6_SUBNET = {IPV6_SUBNET}')
 print(f'MAX_IPS = {MAX_IPS}')
 print(f'INTERFACE = {INTERFACE}')
-print(f'ADDRESS_FILE_PATH = {ADDRESS_FILE}')
+print(f'ADDRESS_FILE = {ADDRESS_FILE}')
+
+
+subnet = IPV6_SUBNET
+num_addresses = MAX_IPS
+filename = ADDRESS_FILE
 
 def generate_random_ipv6_in_subnet(subnet, num_addresses):
     subnet = ipaddress.IPv6Network(subnet)
@@ -44,9 +49,7 @@ def check_addresses_in_subnet(addresses, subnet):
             return False
     return True
 
-subnet = IPV6_SUBNET
-num_addresses = MAX_IPS
-filename = 'address.txt'
+
 
 addresses = generate_random_ipv6_in_subnet(subnet, num_addresses)
 
