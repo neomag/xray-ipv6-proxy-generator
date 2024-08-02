@@ -44,10 +44,9 @@ def check_addresses_in_subnet(addresses, subnet):
             return False
     return True
 
-# Пример использования
 subnet = IPV6_SUBNET
 num_addresses = 10000
-filename = 'random_ipv6_addresses.txt'
+filename = 'address.txt'
 
 addresses = generate_random_ipv6_in_subnet(subnet, num_addresses)
 
