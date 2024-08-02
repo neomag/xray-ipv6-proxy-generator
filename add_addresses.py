@@ -6,7 +6,8 @@ def add_ipv6_address(interface, address):
         command = f'sudo ip -6 addr add {address} dev {interface}'
         result = os.system(command)
         if result == 0:
-            print(f"Successfully added {address} to {interface}")
+            #print(f"Successfully added {address} to {interface}")
+            pass
         else:
             print(f"Failed to add {address} to {interface}")
     except Exception as e:

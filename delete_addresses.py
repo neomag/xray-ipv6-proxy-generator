@@ -6,7 +6,8 @@ def remove_ipv6_address(interface, address):
         command = f'sudo ip -6 addr del {address} dev {interface}'
         result = os.system(command)
         if result == 0:
-            print(f"Successfully removed {address} from {interface}")
+            #print(f"Successfully removed {address} from {interface}")
+            pass
         else:
             print(f"Failed to remove {address} from {interface}")
     except Exception as e:
