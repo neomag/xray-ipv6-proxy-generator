@@ -45,7 +45,7 @@ def check_addresses_in_subnet(addresses, subnet):
     return True
 
 subnet = IPV6_SUBNET
-num_addresses = 10000
+num_addresses = MAX_IPS
 filename = 'address.txt'
 
 addresses = generate_random_ipv6_in_subnet(subnet, num_addresses)
