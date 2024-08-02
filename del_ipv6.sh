@@ -4,7 +4,7 @@
 INTERFACE="eno0"
 
 # Имя файла с IPv6 адресами
-ADDRESS_FILE="address.txt"
+ADDRESS_FILE="address_curr.txt"
 
 # Проверяем, существует ли файл
 if [[ ! -f "$ADDRESS_FILE" ]]; then
