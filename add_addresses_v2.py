@@ -27,6 +27,7 @@ def main():
     print(f'INTERFACE = {INTERFACE}')
     print(f'ADDRESS_FILE = {ADDRESS_FILE}')
     print(f'PARALLELISM = {PARALLELISM}')
+    print('starting ipv6 seeding...')
     
     interface = INTERFACE
     addresses_file = ADDRESS_FILE
