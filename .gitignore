@@ -1,0 +1,8 @@
+*
+!*.py
+!config.example.json
+!.env.EXAMPLE
+!README.md
+!.gitignore
+!*.sh
+
